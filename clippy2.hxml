@@ -1,0 +1,6 @@
+-swf clippy2.swf
+-swf-version 9
+-main Clippy2
+-swf-header 14:14:0
+-resource clippy2.js@js
+--flash-strict
