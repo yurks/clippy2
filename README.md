@@ -34,7 +34,8 @@ Here is a sample HTML snippet that can be used to place Clippy2 button on a page
     <param name="quality" value="high">
     <param name="scale" value="exactfit">
     <param name="wmode" value="transparent">
-    <embed name="clippy-id" src="path/to/clippy2.swf" height="14" width="14" allowscriptaccess="always" quality="high" scale="exactfit" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash">
+    <param name="flashVars" value="">
+    <embed name="clippy-id" src="path/to/clippy2.swf" height="14" width="14" flashVars="" allowscriptaccess="always" quality="high" scale="exactfit" wmode="transparent" pluginspage="http://www.macromedia.com/go/getflashplayer" type="application/x-shockwave-flash">
 </object>
 ```
 
@@ -45,6 +46,8 @@ or jQuery `$('#clippy-id').attr('clippy-text', 'New text to copy')`
 ___Make sure___ that you have the same values for id-attribute in <object> tag and name-attribute in <embed> tag.
 
 ___Remember___ that id-attribute should be unique across page. So, in case you use several Clippy2 buttons on page, take care for this.
+
+For disabling embedded icon just set `noIcon=true` as value for `flashVars` <embed> attribute and <object> parameter. You will get transparent flash buton and its width and height could be modified.
 
 
 ## Copying text with JavaScript callback

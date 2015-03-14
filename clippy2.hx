@@ -44,7 +44,9 @@ class Clippy2 {
         button_fake.useHandCursor = true;
         button_fake.mouseChildren = false;
 
-        var element = true ? button : button_fake;
+        var noIcon:Bool = flash.Lib.current.loaderInfo.parameters.noIcon == "true";
+
+        var element = noIcon ? button_fake : button;
 
         element.addEventListener(MouseEvent.MOUSE_UP, function(e:MouseEvent) {
             //var text:String = flash.Lib.current.loaderInfo.parameters.text;
